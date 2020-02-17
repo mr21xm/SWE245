@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> HTML Tutorial 1</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    </head>
+
+    <body>
+		<div id="intro">
+	<div id= "wrapper">
+		<div id="slider-area" class="owl-carousel">
+			<div style="background-image: url(images/city.jpg);"></div>
+			<div style="background-image: url(images/nature.jpg);"></div>
+		</div>
+      <header id="menu" class="black">
+        <div id="logo">
+          <img src="images/logo.png" alt="logo">
+        </div>
+        <nav>
+          <ul>
+            <li class="hvr-underline-from-center"><a href="index.html" id="home">Home</a></li>
+            <li class="hvr-underline-from-center"><a href="#about">About</a></li>
+            <li class="hvr-underline-from-center"><p onclick = "move()">Partners</p></li>
+            <li class="hvr-underline-from-center"><a href="search.html">Search</a></li>
+            <li class="hvr-underline-from-center"><a href="news.html">News</a></li>
+            <li class="hvr-underline-from-center"><a href="help.html">Help</a></li>
+            <li class="hvr-underline-from-center"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+          <section id ="welcome">
+            <div class="box">
+            <p id="welmes">Welcome! This is</p>
+            <h1>Mariam AlQubaisi</h1>
+            <p>I'm a student at Zayed University</p>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna nunc. In et arcu dignissim, vestibulum nulla vitae, semper eros.
+              Donec sed ipsum nec dolor interdum volutpat. Vestibulum vitae ex venenatis, gravida justo eget, fringilla lectus.</p>
+              <br>
+              <br>
+              <p id="download" class="hvr-sweep-to-right"><a href="#" class="hvr-icon-down">DOWNLOAD CV &nbsp;<i class="fa fa-download" style="font-size:28px;color:black
+                "></i></a></p>
+
+              </div>
+ 		  </section>
+		</div>
+		</div>
+
+  <section id="about">
+    <div class="container">
+      <h1>Few words <b>About me</b></h1>
+		<div id="para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Donec id magna nunc. In et arcu dignissim, vestibulum nulla vitae, semper eros.
+        Donec sed ipsum nec dolor interdum volutpat. Vestibulum vitae ex venenatis, gravida justo eget, fringilla lectus.</p>
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna nunc. In et arcu dignissim, vestibulum nulla vitae, semper eros.
+        Donec sed ipsum nec dolor interdum volutpat. Vestibulum vitae ex venenatis, gravida justo eget, fringilla lectus.</p>
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id magna nunc. In et arcu dignissim, vestibulum nulla vitae, semper eros.
+        Donec sed ipsum nec dolor interdum volutpat. Vestibulum vitae ex venenatis, gravida justo eget, fringilla lectus.</p>
+		</div>
+    </div>
+  </section>
+  <section id="partners">
+    <div class="container">
+      <div id="part-title">
+        <h1>PARTNERS</h1>
+      </div>
+      <div class="part">
+        <img src="images/mark.png" alt="Mark's photo">
+        <h1> MARK</h1>
+        <p> Get notifications about new releases in our mobile app.</p>
+      </div>
+      <div class="part">
+        <img src="images/amy.png" alt="Amy's photo">
+        <h1> AMY</h1>
+        <p> Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+      </div>
+      <div class="part">
+        <img src="images/richard.png" alt="Richard's photo">
+        <h1> RICHARD</h1>
+        <p> Watch your favorite series at home on large screen with our TV application.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h1>Contact me</h1>
+      <h4>Email</h4>
+      <p>example@example.com</p>
+      <h4>Phone</h4>
+      <p>97106283518</p>
+      <h4>Address</h4>
+      <p>Almushrif street 82</p>
+    </div>
+    <div id="social">
+      <a href="https://www.facebook.com/profile.php?id=100009433515985" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/MR21xm_" class="fa fa-twitter"></a>
+      <a href="https://www.linkedin.com/in/mariam-alqubaisi-140896179/" class="fa fa-linkedin"></a>
+    </div>
+  </section>
+<footer>
+  <h4 style="text-align:center;">Copyright 2020 &#9400;</h4>
+</footer>
+
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+		<script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+		<script>
+			$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  if (scroll >= $('#intro').height()) {
+	  $("#menu").removeClass("black");
+    $("#menu").addClass("fade");
+	  console.log("confirm")
+  } else {
+  $("#menu").removeClass("white");
+	$("#menu").addClass("black");
+  $("#menu").removeClass("fade");
+
+  }
+});
+
+		$('#slider-area').owlCarousel({
+    loop:true,
+	autoplay:true,
+	dotsEach:true,
+	autoplaySpeed:1000/true,
+	animateOut: 'fadeOut',
+	autoplayTimeout:8000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+function move () {
+  document.documentElement.scrollTop = document.body.scrollTop = 1055;
+}
+		</script>
+
+    </body>
+</html>

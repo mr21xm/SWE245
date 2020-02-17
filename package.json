@@ -1,0 +1,22 @@
+{
+  "name": "swe245",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr21xm/SWE245.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr21xm/SWE245/issues"
+  },
+  "homepage": "https://github.com/mr21xm/SWE245#readme",
+  "dependencies": {
+    "hover.css": "^2.3.2"
+  }
+}
