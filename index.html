@@ -74,20 +74,20 @@
         <h1>PARTNERS</h1>
       </div>
 	  <div id="mid">
-      <div class="part">
+      <div onclick="collapse()" class="part">
         <img src="images/mark.png" alt="Mark's photo">
         <h1> MARK</h1>
-        <p> Get notifications about new releases in our mobile app.</p>
+        <p id="markinfo"> Get notifications about new releases in our mobile app.Lorem ipsum dolor sit amet.</p>
       </div>
-      <div class="part">
+      <div onclick="collapse2()" class="part">
         <img src="images/amy.png" alt="Amy's photo">
         <h1> AMY</h1>
-        <p> Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+        <p id="amyinfo"> Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
       </div>
-      <div class="part">
+      <div onclick="collapse3()" class="part">
         <img src="images/richard.png" alt="Richard's photo">
         <h1> RICHARD</h1>
-        <p> Watch your favorite series at home on large screen with our TV application.</p>
+        <p id="richardinfo"> Watch your favorite series at home on large screen with our TV application.</p>
       </div>
 	</div>
   </section>
@@ -110,50 +110,72 @@
 <footer>
   <h4 style="text-align:center;">Copyright 2020 &#9400;</h4>
 </footer>
-
-
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
 		<script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
-		<script>
-			$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  if (scroll >= $('#intro').height()) {
-	  $("#menu").removeClass("black");
+
+    <script>
+    $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= $('#intro').height()) {
+    $("#menu").removeClass("black");
     $("#menu").addClass("fade");
-	  console.log("confirm")
-  } else {
-  $("#menu").removeClass("white");
-	$("#menu").addClass("black");
-  $("#menu").removeClass("fade");
+    console.log("confirm")
+    } else {
+    $("#menu").removeClass("white");
+    $("#menu").addClass("black");
+    $("#menu").removeClass("fade");
 
-  }
-});
-
-		$('#slider-area').owlCarousel({
-    loop:true,
-	autoplay:true,
-	dotsEach:true,
-	autoplaySpeed:1000/true,
-	animateOut: 'fadeOut',
-	autoplayTimeout:8000,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
     }
-})
+    });
 
+    $('#slider-area').owlCarousel({
+    loop:true,
+    autoplay:true,
+    dotsEach:true,
+    autoplaySpeed:1000/true,
+    animateOut: 'fadeOut',
+    autoplayTimeout:8000,
+    responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:1
+      },
+      1000:{
+          items:1
+      }
+    }
+    })
 
-			
-			
-		</script>
+    function collapse() {
+      var info1 = document.getElementById('markinfo')
+      if (info1.style.display === 'none') {
+        info1.style.display = 'block'
+      }else {
+        info1.style.display = 'none'
+      }
+    }
 
+    function collapse2()  {
+      var info2 = document.getElementById('amyinfo')
+      if (info2.style.display === 'none') {
+        info2.style.display = 'block'
+      }else {
+        info2.style.display = 'none'
+      }
+    }
+
+    function collapse3() {
+      var info3 = document.getElementById('richardinfo')
+
+      if (info3.style.display === 'none') {
+        info3.style.display = 'block'
+      }else {
+        info3.style.display = 'none'
+      }
+    }
+    </script>
     </body>
 </html>

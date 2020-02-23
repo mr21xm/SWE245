@@ -382,7 +382,7 @@ div #para {
     display: table-cell;
     width:500px;
     border-radius: 4px;
-    height: 370px;
+    height: 100%;
 }
 
 .part:hover {
@@ -412,12 +412,23 @@ div #para {
   text-align:center;
   font-size: 22px;
   letter-spacing: 3px;
+  padding:20px;
+}
+
+#partners h1:hover {
+  color:#000000;
 }
 
 #partners p {
+  display:none;
   color: rgb(160,158,158);
   text-align: center;
-  padding: 30px 60px 0 60px;
+  padding: 30px 60px 30px 60px;
+  background-color: white;
+}
+
+#markinfo {
+  display:block;
 }
 
 /* Contact me */
