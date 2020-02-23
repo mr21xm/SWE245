@@ -46,8 +46,7 @@ ul {
 header {
 
 	z-index: 2;
-	background: black;
-	padding: 10px 0 10px 0;
+	background: transparent;
 	min-height: 100px;
 }
 
@@ -57,15 +56,12 @@ header {
   top: 200;
   width: 100%;
 }
-.black{
-    transition: background-color 1000ms;
-	  background-color: rgba(0,0,0,0.50);
-}
+
 
 header img {
 	width: 110px;
 	height: 70px;
-	margin-left: 150px;
+	margin-left: 170px;
 	margin-top: 20px;
 }
 header a {
@@ -73,6 +69,12 @@ header a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
+}
+
+header a:hover {
+	cursor:default !important; 
+	Text-Decoration: None !important;
+	color:white;
 }
 
 header li {
@@ -101,16 +103,6 @@ header nav{
 #home {
 	color:#A88650;
 	font-weight: 500;
-}
-
-header .highlight, header .current a{
-	color:#92CEFB;
-	font-weight: bold;
-}
-
-header a:hover{
-	color: #DADADA;
-	font-weight: bold;
 }
 
 p {
@@ -159,17 +151,14 @@ p {
 
 
 /* Intro Section */
- #wrapper {
-	position: relative;
-	height: 100vh;
- }
 
 #slider-area {
-	position: absolute;
+	position: relative;
 	height: 100vh;
 	width:100%;
 	top:0;
 	left:0;
+	z-index: -10;
 }
 #slider-area .owl-item div {
 	height: 100vh;
@@ -180,6 +169,13 @@ p {
 	background-position: 50% 50%;
 }
 
+.overlay {
+	background-color:rgba(0,0,0,0.50);
+	position: relative;
+	width:100%;
+	height:100%;
+	z-index: -5;
+}
 
 /* Welcome */
 
@@ -204,7 +200,6 @@ p {
     border-spacing: 10px; /*Optional*/
     height: 40%;
     text-align: center;
-    background-color: rgba(0,0,0,0.30);
 	padding:20px;
 }
 
@@ -239,7 +234,7 @@ p {
 }
 
 .box a {
-  color:white;
+  	color:white;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -413,6 +408,7 @@ div #para {
   font-size: 22px;
   letter-spacing: 3px;
   padding:20px;
+	padding-bottom: 40px;
 }
 
 #partners h1:hover {
@@ -420,7 +416,6 @@ div #para {
 }
 
 #partners p {
-  display:none;
   color: rgb(160,158,158);
   text-align: center;
   padding: 30px 60px 30px 60px;
