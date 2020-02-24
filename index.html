@@ -3,12 +3,12 @@
     <head>
         <title> HTML Tutorial 1</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
 		<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+		<link href="hover.css/css/css/hover-min.css" rel="stylesheet">
     </head>
 
     <body>
@@ -19,8 +19,11 @@
 			<div style="background-image: url(images/nature.jpg);"></div>
 		</div>
       <header id="menu" class="black">
-        <div id="logo">
+        <div id="logo" style="display:block">
           <img src="images/logo.png" alt="logo">
+        </div>
+		<div id="logo2" style="display:none">
+          <img src="images/logoB.png" alt="logo">
         </div>
         <nav>
           <ul>
@@ -46,8 +49,7 @@
 					  Donec sed ipsum nec dolor interdum volutpat. Vestibulum vitae ex venenatis, gravida justo eget, fringilla lectus.</p>
 					  <br>
 					  <br>
-					  <p id="download" class="hvr-sweep-to-right"><a href="#" class="hvr-icon-down">DOWNLOAD CV &nbsp;<i class="fa fa-download" style="font-size:28px;color:black
-						"></i></a></p>
+					  <span id="download"><a href="#" class="hvr-icon-down"><span id="down"> DOWNLOAD CV</span> &nbsp; <i class="fa fa-arrow-circle-down hvr-icon"></i></a></span>
 				 </div>
               </div>
  		  </section>
@@ -74,20 +76,20 @@
         <h1>PARTNERS</h1>
       </div>
 	  <div id="mid">
-      <div onclick="collapse()" class="part">
+      <div class="part" >
         <img src="images/mark.png" alt="Mark's photo">
         <h1> MARK</h1>
-        <p id="markinfo"> Get notifications about new releases in our mobile app.Lorem ipsum dolor sit amet.</p>
+        <p id="info"> Get notifications about new releases in our mobile app.Lorem ipsum dolor sit amet.</p>
       </div>
-      <div onclick="collapse2()" class="part">
+      <div class="part">
         <img src="images/amy.png" alt="Amy's photo">
         <h1> AMY</h1>
-        <p id="amyinfo"> Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
+        <p id="info1"> Enjoy new episodes on your laptop in browser with our web service, which supports all the platforms.</p>
       </div>
-      <div onclick="collapse3()" class="part">
+      <div class="part">
         <img src="images/richard.png" alt="Richard's photo">
         <h1> RICHARD</h1>
-        <p id="richardinfo"> Watch your favorite series at home on large screen with our TV application.</p>
+        <p id="info2"> Watch your favorite series at home on large screen with our TV application.</p>
       </div>
 	</div>
   </section>
@@ -117,15 +119,23 @@
     <script>
     $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= $('#intro').height()) {
+    if (scroll >= $('header').height()) {
     $("#menu").removeClass("black");
     $("#menu").addClass("fade");
-    console.log("confirm")
+	$('a').addClass('high');
+	$('li').addClass('center');
+	$('li').removeClass('hvr-underline-from-center');
+	$('#logo').css('display','none');
+    $('#logo2').css('display','block');
     } else {
     $("#menu").removeClass("white");
     $("#menu").addClass("black");
+	$('a').removeClass('high');
+	$('li').removeClass('center');
+	$('li').addClass('hvr-underline-from-center');
     $("#menu").removeClass("fade");
-
+	$('#logo').css('display','block')
+    $('#logo2').css('display','none')
     }
     });
 
@@ -148,34 +158,6 @@
       }
     }
     })
-
-    function collapse() {
-      var info1 = document.getElementById('markinfo')
-      if (info1.style.display === 'none') {
-        info1.style.display = 'block'
-      }else {
-        info1.style.display = 'none'
-      }
-    }
-
-    function collapse2()  {
-      var info2 = document.getElementById('amyinfo')
-      if (info2.style.display === 'none') {
-        info2.style.display = 'block'
-      }else {
-        info2.style.display = 'none'
-      }
-    }
-
-    function collapse3() {
-      var info3 = document.getElementById('richardinfo')
-
-      if (info3.style.display === 'none') {
-        info3.style.display = 'block'
-      }else {
-        info3.style.display = 'none'
-      }
-    }
     </script>
     </body>
 </html>
