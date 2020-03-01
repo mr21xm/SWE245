@@ -11,6 +11,19 @@
 	<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
 	<link href="hover.css/css/css/hover-min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if (scroll >= $('.overlap').height()) {
+	  $('.skill_one').animate({width:'80%'}, 1000);
+	  $('.skill_two').animate({width:'50%'}, 1000);
+	  $('.skill_three').animate({width:'66%'}, 1000);
+	}
+	});
+});
+	</script>
 </head>
 
 <body>
@@ -29,12 +42,39 @@
           </ul>
         </nav>
       </header>
-	
-	<section id="about">
-		
-		
+	<section class="overlap">
 	</section>
-	
+	<section class="breadcrumb">
+		<h1> About me </h1>
+			<a href="index.html"> HOME &nbsp; </a> <p> /   ABOUT </p>
+	</section>
+	<section id="about">
+			<h1> Few Facts About me </h1>
+		<p> This is Mariam AlQubaisi, and i’m a 19 year old student in Zayed University. I’m currently studying my bachelor degree in web and app development, but I have graduated from Udacity’s Front end web developer Nanodegree. I spend my extra time studying new programming languages, editing videos, and developing web pages for practice. Although I’m new to all this, but I’m willing to learn and gain experience.</p>
+	</section>
+  <section id="progress">
+		<h1> My Web Development Skills</h1>
+		<div id="bars">
+			<div class="skill">
+			<div class="prog">	<h2> HTML & CSS </h2> <h3>80%</h3> </div>
+			<div class="skill_bar">
+	  		<div class="skill_bar_progress skill_one"></div>
+			</div>
+		</div>
+			<div class="skill">
+			<div class="prog"> <h2> JAVASCRIPT </h2> <h3>50%</h3> </div>
+			<div class="skill_bar">
+			  <div class="skill_bar_progress skill_two"></div>
+			</div>
+		</div>
+			<div class="skill">
+		<div class="prog">	<h2> PYTHON </h2>  <h3>66%</h3> </div>
+			<div class="skill_bar">
+			  <div class="skill_bar_progress skill_three"></div>
+			</div>
+		</div>
+		</div>
+	</section>
 	<footer>
 	<div class="row">
   <h4>Copyright 2020 &#9400;</h4>

@@ -9,6 +9,10 @@
         background: transparent;
     }
 
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
 body {
 	font:20px/1.5 'Abel';
 	padding:0;
@@ -54,7 +58,6 @@ header {
 #menu {
  height: 100px;
   position: fixed;
-  top: 200;
   width: 100%;
   margin:auto;
 overflow: hidden;
@@ -242,6 +245,39 @@ p {
   background-color: white;
 }
 
+
+/* Breadcrumb */
+
+.breadcrumb {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.60);
+  -webkit-box-shadow: inset 0px 0px 17px 2px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset 0px 0px 17px 2px rgba(0,0,0,0.35);
+  box-shadow: inset 0px 0px 17px 2px rgba(0,0,0,0.35);
+}
+
+.breadcrumb h1 {
+  padding-top: 20px;
+  font-size: 20px;
+  color:white;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color:#A88650;
+}
+
+.breadcrumb p {
+  display:inline-block;
+  font-size: 18px;
+}
+
+.overlap {
+  width: 100%;
+  height: 120px;
+}
 /* Welcome */
 
 #welcome {
@@ -369,8 +405,85 @@ i.fa.fa-arrow-circle-down {
   animation-timing-function: ease-out;
 }
 
-/* CV download*/ 
+/* CV download*/
 /* About */
+#about {
+	width:100%;
+	height: 100%;
+	clear:both;
+  background-color:white;
+	color: black;
+	padding:50px 0 50px 0;
+	-webkit-box-shadow: inset 0px 0px 17px 2px rgba(0,0,0,0.35);
+	-moz-box-shadow: inset 0px 0px 17px 2px rgba(0,0,0,0.35);
+	box-shadow: inset 0px 0px 17px 2px rgba(0,0,0,0.35);
+}
+
+#about h1 {
+  text-align: center;
+	font-size: 2.5em;
+	font-weight: 200;
+	margin-bottom: 20px;
+}
+
+#about p {
+	font-size: 18px;
+  text-align: center;
+  margin: auto;
+  width:60%;
+}
+
+div #about {
+    width: 70%;
+}
+
+#progress {
+  width:100%;
+  height: 400px;
+}
+#bars {
+  padding-top:20px;
+  padding-left: 30px;
+  text-align: center;
+}
+
+#progress h1 {
+  padding-top: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#progress h3 {
+  text-align: right;
+}
+
+#progress h2 {
+  text-align: left;
+}
+.prog {
+  width:45%;
+  margin: auto;
+}
+
+.skill {
+  padding-bottom: 20px;
+}
+
+.skill_bar {
+  width:600px;
+  height:20px;
+  border-radius: 20px;
+  background:#c0c0c0;
+  margin:auto;
+}
+
+.skill_bar_progress {
+  border-radius: 20px;
+  width:0%;
+  height:100%;
+  background:#A88650;
+}
+
 
 #cv {
 	width:100%;
@@ -486,7 +599,7 @@ div #cv {
   height: 400px;
   color: white;
 
-} 
+}
 
 #boxes {
 	height:1000px;
@@ -499,7 +612,7 @@ div #cv {
   -webkit-box-shadow: 10px 10px 24px -16px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 24px -16px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 24px -16px rgba(0,0,0,0.75);
-} 
+}
 
 @media screen and (max-width: 1000px) {
   .column {
@@ -532,7 +645,7 @@ div #cv {
 	.alignright {
 		text-align:center;
 	}
-	
+
 }
 
 @media screen and (max-width: 1610px) {
@@ -542,7 +655,7 @@ div #cv {
 }
 
 @media screen and (max-width: 460px) {
-	
+
 	#fb {
 		font-size:30px;
 	}
@@ -617,6 +730,8 @@ div #cv {
 /* Footer */
 
 footer {
+  position:relative;
+   bottom:0;
 	height: 200px;
 	width: 100%;
 	background-color: #1A1A1A;
@@ -645,18 +760,18 @@ footer h4 {
     text-align: center;
     display: inline-block;
     color: white;
-    
-    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
-    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 .footer-social-links a i,
 .footer-social-links a span{
     position: relative;
     top: 7px;
-    left: 1px; 
+    left: 1px;
 }
 .footer-social-links a:before{
     content: "";
@@ -667,23 +782,23 @@ footer h4 {
     top: 0;
     left: 0;
     border: 1px solid #fff;
-    
+
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    
+
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    
-    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
-    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
-    
+
 }
 .footer-social-links a:hover{
     color: #A88650;
