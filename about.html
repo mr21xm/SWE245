@@ -13,20 +13,46 @@
 	<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>
-	$(document).ready(function(){
-		$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-		if (scroll >= $('.overlap').height()) {
-	  $('.skill_one').animate({width:'80%'}, 1000);
-	  $('.skill_two').animate({width:'50%'}, 1000);
-	  $('.skill_three').animate({width:'66%'}, 1000);
-	}
-	});
+		
+		
+		$(window).ready( function() {
+			var height = $(window).height();
+			console.log(height)
+			if (height > 731) {
+				$('.skill_one').animate({width:'80%'}, 1000);
+				$('.skill_two').animate({width:'50%'}, 1000);
+	  			$('.skill_three').animate({width:'66%'}, 1000);	
+			} else {
+				sc();
+			}
+		})
+		
+		function sc () {
+		$(window).scroll(function move() {
+			var top_of_element = $("#progress").offset().top;
+			var bottom_of_element = $("#progress").offset().top + $("#progress").outerHeight();
+			var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+			var top_of_screen = $(window).scrollTop();
+			var prog = $('.skill_bar_progress').width();
+			
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element) && (prog == 0)) {
+		$('.skill_one').animate({width:'80%'}, 1000);
+	  	$('.skill_two').animate({width:'50%'}, 1000);
+	  	$('.skill_three').animate({width:'66%'}, 1000);	
+	} else {
+		console.log('not showing')
+		console.log(prog)
+
+    }
+			
 });
+}
+	
+	
 	</script>
 </head>
 
-<body>
+<body onload()= "move()">
 	<header id="menu" class="fade">
 		<div id="logo2">
           <img src="images/logoB.png" alt="logo">
@@ -47,6 +73,7 @@
 	<section class="breadcrumb">
 		<h1> About me </h1>
 			<a href="index.html"> HOME &nbsp; </a> <p> /   ABOUT </p>
+
 	</section>
 	<section id="about">
 			<h1> Few Facts About me </h1>
@@ -58,7 +85,7 @@
 			<div class="skill">
 			<div class="prog">	<h2> HTML & CSS </h2> <h3>80%</h3> </div>
 			<div class="skill_bar">
-	  		<div class="skill_bar_progress skill_one"></div>
+	  		<div class="skill_bar_progress skill_one" id="skillone"></div>
 			</div>
 		</div>
 			<div class="skill">
