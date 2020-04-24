@@ -60,7 +60,7 @@ header {
   position: fixed;
   width: 100%;
   margin:auto;
-overflow: hidden;
+  overflow: hidden;
 
 }
 .black{
@@ -245,6 +245,18 @@ p {
   background-color: white;
 }
 
+.owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+      background: #2caae1;
+  }
+
+  .owl-carousel .nav-btn{
+      height: 47px;
+      width: 26px;
+      cursor: pointer;
+      top: 100px;
+  }
+  
 
 /* Breadcrumb */
 
@@ -280,13 +292,12 @@ p {
 }
 /* Welcome */
 
-#welcome {
+.welcome {
   position:relative;
   width:100%;
   z-index: 1;
   height: 100%;
   color:black;
-  background-color: rgba(0,0,0,0.60);
 }
 
 .box {
@@ -301,7 +312,7 @@ p {
     border-spacing: 10px; /*Optional*/
     height: 40%;
     text-align: center;
-	padding:20px;
+	  padding:20px;
 }
 
 .box #welmes {
@@ -714,13 +725,9 @@ div #cv {
   display:block;
 }
 
-/* Contact me */
 
 
  /* social */
-
-
-
 #social {
 	text-align: center;
 }
@@ -730,12 +737,11 @@ div #cv {
 /* Footer */
 
 footer {
-  position:relative;
-   bottom:0;
 	height: 200px;
 	width: 100%;
 	background-color: #1A1A1A;
 	color:white;
+  display: grid;
 	text-align: center;
 }
 
@@ -808,7 +814,76 @@ footer h4 {
 }
 
 
+#partnership {
+  width:100%;
+	height: 100%;
+	background: white;
+	text-align: center;
+  padding: 50px 0 50px 0;
+}
 
+#partnership .con {
+	width: 50%;
+	height: 800px;
+	margin: auto;
+	background-color: #F8F8F8;
+	-webkit-box-shadow:  0px 0px 17px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow:  0px 0px 17px 2px rgba(0,0,0,0.15);
+	box-shadow:  0px 0px 17px 2px rgba(0,0,0,0.15);
+}
+
+#button1 {
+  width:30%;
+  margin-top: 80px;
+  border-spacing: 5px; /*Optional*/
+  border-radius: 50px;
+  background-color:transparent;
+  border: 1px solid #A88650;
+  color:#A88650;
+  text-align: center;
+  padding:10px;
+  margin-left:10px;
+}
+#button1:hover {
+  cursor: pointer;
+  background-color: #A88650;
+  border: 1px solid white;
+  color:white;
+}
+
+#partnership textarea:focus~label,
+#partnership textarea:valid~label {
+  font-size: 16px;
+  top: -30px;
+  color:  #A88650;
+}
+
+#partnership textarea .input-field {
+  margin: auto;
+  position: relative;
+  width: 70%;
+  height: 44px;
+  line-height: 44px;
+  padding-bottom: 50px;
+}
+
+.input-field1 {
+  margin: auto;
+  position: relative;
+  width: 70%;
+  height: 44px;
+  line-height: 44px;
+  padding-top: 10px;
+  margin-top: 50px;
+}
+
+#partnership h1 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.6em;
+	padding: 50px 0 20px 0 ;
+
+}
 /* Help Page */
 
 #help {
@@ -816,12 +891,12 @@ footer h4 {
 	height: 100%;
 	background: white;
 	text-align: center;
-	padding:50px;
+  padding: 50px 0 50px 0;
 }
 
 .con {
 	width: 50%;
-	height: 500px;
+	height: 600px;
 	margin: auto;
 	background-color: #F8F8F8;
 	-webkit-box-shadow:  0px 0px 17px 2px rgba(0,0,0,0.15);
@@ -833,8 +908,8 @@ footer h4 {
 	text-align: center;
 	font-weight: 700;
 	font-size: 1.6em;
-	padding: 50px 0 20px 50px ;
-	
+	padding: 50px 0 20px 0 ;
+
 }
 
 form {
@@ -908,6 +983,98 @@ input:valid~label {
   top: -24px;
   color:  #A88650;
 }
+
+#button {
+  width:50%;
+  margin-top: 80px;
+  border-spacing: 5px; /*Optional*/
+  border-radius: 50px;
+  background-color:transparent;
+  border: 1px solid #A88650;
+  color:#A88650;
+  text-align: center;
+  padding:10px;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #A88650;
+  border: 1px solid white;
+  color:white;
+}
+
+
+/* Contact */
+
+#contact {
+  width:100%;
+  height:500px;
+}
+
+#contact h1 {
+  width: 100%;
+  padding-top:30px;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+#contactS {
+  width: 100%;
+}
+
+.cons {
+  float:left;
+  width:50%;
+  height:600px;
+}
+
+#site {
+  color:#A88650;
+  font-size: 1.3em;
+  text-align: center;
+  padding-top:60px;
+}
+
+.contactb {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+      ),
+    url(../images/contacy.jpg);
+  background-size: cover;
+  height: 600px;
+  padding-top: 20px;
+  float:left;
+  width:50%;
+  height:600px;
+}
+
+#cbox {
+  z-index: 1;
+  position: relative;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  left:0;
+  width: 80%; /*Optional*/
+  table-layout: fixed; /*Optional*/
+  border-spacing: 10px; /*Optional*/
+  height: 40%;
+  text-align: center;
+  padding:20px;
+}
+
+#cbox p {
+  position: relative;
+  top:60px;
+  left:20px;
+  padding:10px;
+  color: white;
+  text-align: left;
+  font-size: 1em;
+}
+
 /*responsive */
 
 @media only screen and (max-width: 1500px) {

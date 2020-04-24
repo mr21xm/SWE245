@@ -3,22 +3,18 @@
     <head>
         <title> HTML Tutorial 1</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-		<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-		<link href="hover.css/css/css/hover-min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+            <!-- Owl Stylesheets -->
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+		    <link href="hover.css/css/css/hover-min.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+		    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 	</head>
 
     <body>
-		<div id="intro">
-	<div id= "wrapper">
-		<div id="slider-area" class="owl-carousel">
-			<div style="background-image: url(images/city.jpg);"></div>
-			<div style="background-image: url(images/nature.jpg);"></div>
-		</div>
       <header id="menu" class="black">
         <div id="logo" style="display:block">
           <img src="images/logo.png" alt="logo">
@@ -30,6 +26,7 @@
           <ul>
             <li class="hvr-underline-from-center"><a href="index.html" id="home">Home</a></li>
             <li class="hvr-underline-from-center"><a href="about.html">About</a></li>
+            <li class="hvr-underline-from-center"><a href="requestforinfo.html">Partnership</a></li>
             <li class="hvr-underline-from-center"><a href="search.html">Search</a></li>
             <li class="hvr-underline-from-center"><a href="news.html">News</a></li>
             <li class="hvr-underline-from-center"><a href="help.html">Help</a></li>
@@ -37,13 +34,35 @@
           </ul>
         </nav>
       </header>
-          <section id ="welcome">
-            <div class="box">
-				<div>
-					<p id="fb">Front End <br>&nbsp;	&nbsp;Web Developer.</p>
-				 </div>
-              </div>
- 		  </section>
+		<div id="intro">
+	     <div id= "wrapper">
+        		<div id="slider-area" class="owl-carousel">
+        			<div style="background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            ),
+            /* bottom, image */
+             url(images/city.jpg);">
+                  <section class ="welcome">
+                  <div class="box">
+                        <div>
+                               <p id="fb">Front End <br>&nbsp;	&nbsp;Web Developer.</p>
+                        </div>
+                  </div>
+                 </section>
+             </div>
+        			<div style="background-image:
+            linear-gradient(
+              rgba(0, 0, 0, 0.6),
+              rgba(0, 0, 0, 0.6)
+            ),
+            /* bottom, image */
+             url(images/nature.jpg);">
+
+           </div>
+        		</div>
+
 		</div>
 		</div>
 			<section id ="hello">
@@ -58,18 +77,18 @@
 					  Donec sed ipsum nec dolor interdum volutpat. Vestibulum vitae ex venenatis, gravida justo eget, fringilla lectus.</p>
 					  <br>
 					  <br>
-					 
+
 				 </div>
               </div>
  		  </section>
-			
+
   <section id="cv">
     <div class="container">
       <h1 class="alignleft">Few words <b>In a CV</b></h1>
 		<span class="alignright" id="download"><a href="#" class="hvr-icon-down"><span id="down"> DOWNLOAD CV</span> &nbsp; <i class="fa fa-arrow-circle-down hvr-icon"></i></a></span>
 		</div>
   </section>
-			
+
   <section id="projects">
     <div id="boxes" class="container">
        <div id="part-title">
@@ -88,7 +107,7 @@
         <h1> Arcade Game Project </h1>
       </div>
 	  </a>
-	  <a href="https://github.com/mr21xm/Arcade-game-project" target="_blank">  
+	  <a href="https://github.com/mr21xm/neighborhood-2" target="_blank">
 	  <div class="columnb">
         <img src="images/screenshot3.PNG" alt="project3's photo">
         <h1>Neighborhood Map Project</h1>
@@ -96,13 +115,13 @@
 	  </div>
 	  </a>
 	  <div class="rowb">
-	  <a href="https://github.com/mr21xm/Restaurant-review-project" target="_blank">  
+	  <a href="https://github.com/mr21xm/Restaurant-review-project" target="_blank">
 	  <div class="columnb">
         <img src="images/screenshot4.png" alt="project4's photo">
         <h1> Restaurant Review Project</h1>
       </div>
 	  </a>
-	 <a href="https://github.com/mr21xm/MyReads-project" target="_blank">  
+	 <a href="https://github.com/mr21xm/MyReads-project" target="_blank">
 	  <div class="columnb">
         <img src="images/screenshot5.png" alt="project5's photo">
         <h1> MyRead Project</h1>
@@ -140,27 +159,28 @@
      </div>
 	</div>
   </section>
-  
-<footer>
-	<div class="row">
-  <h4>Copyright 2020 &#9400;</h4>
-		<div class="footer-social-links">
-  <a href="https://www.facebook.com/profile.php?id=100009433515985" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-  <a href="https://twitter.com/MR21xm_" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-  <a href="https://github.com/mr21xm" title="github" target="_blank"><i class="fa fa-github"></i></a>
-  <a href="https://www.linkedin.com/in/mariam-alqubaisi-140896179/" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-</div>
-    </div>
-</footer>
+
+      <footer>
+      	<div class="row">
+            <h4>Copyright 2020 &#9400;</h4>
+          		<div class="footer-social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009433515985" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/MR21xm_" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/mr21xm" title="github" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mariam-alqubaisi-140896179/" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+              </div>
+          </div>
+      </footer>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-		<script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+		<script src="OwlCarousel2-2.3.4/src/owl.carousel.js"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
     <script>
-			
-		
+
+
     $(window).scroll(function() {
-		    
+
     var scroll = $(window).scrollTop();
     if (scroll >= $('header').height()) {
     $("#menu").removeClass("black");
@@ -185,7 +205,7 @@
     $('#slider-area').owlCarousel({
     loop:true,
     autoplay:true,
-    dotsEach:true,
+    nav:true,
     autoplaySpeed:1000/true,
     animateOut: 'fadeOut',
     autoplayTimeout:8000,
@@ -201,6 +221,7 @@
       }
     }
     })
+
     </script>
     </body>
 </html>

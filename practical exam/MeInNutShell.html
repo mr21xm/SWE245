@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/MeInNutShell.css">
+    <title>Mariam AlQubaisi</title>
+  </head>
+  <body>
+    <h1> Mariam AlQubaisi</h1>
+    <h2> Here is a <span> nutshell </span> about <span> me </span> ... </h2>
+    <p> I am front - end web developer that graduated from Udacity and now I am studying for my bachelor degree.</p>
+    <div class="green" id="col1" onclick="check()">
+        <p>A summary</p>
+    </div>
+    <div id="summary" style="display: none;">
+      <p>This is Mariam AlQubaisi, and i’m a 19 year old student in Zayed University. I’m currently studying my bachelor degree in web and app development, but I have graduated from Udacity’s Front end web developer Nanodegree. I spend my extra time studying new programming languages, editing videos, and developing web pages for practice. Although I’m new to all this, but I’m willing to learn and gain experience. </p>
+    </div>
+
+    <div class="green" id="col2" onclick="check1()">
+       <p>I am from ... </p>
+    </div>
+    <div id="from" style="display: none;">
+      <h3> United Arab Emirates</h3>
+       <img src="images/UAE-Flag.png" alt="uae flag" width="100px" height="50px">
+       <p> United Arab Emirates is my country that I was born in. This country was established by the hands of Sheikh Zayed Bin Sultan Al Nahyan, and our rulers are continuing on their father's steps in ruling our country to be the best.</p>
+    </div>
+
+    <div class="green" id="col3" onclick="check2()">
+        <a href="help.html"> <p>I study in Zayed University</p> </a>
+    </div>
+    <div id="classes" style="display: none;">
+      <p> Some of my courses are shown below: </p>
+      <table cellspacing="5px">
+        <caption id="basic">Basic ZU courses</caption>
+
+        <tr>
+          <th> Courses</th>
+          <th>Numbers</th>
+        </tr>
+        <tr>
+          <th rowspan="3">GEN</th>
+          <td>110</td>
+        </tr>
+        <tr>
+          <td>120</td>
+        </tr>
+        <tr>
+          <td>135</td>
+        </tr>
+        <tr>
+          <th rowspan="2">SWE</th>
+          <td>225</td>
+        </tr>
+        <tr>
+          <td>245</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+    var col1 = document.getElementById('col1')
+     function check () {
+      var summary = document.getElementById('summary')
+      if (summary.style.display = 'none') {
+        col1.classList.add("active");
+        summary.style.display = 'block'
+      } else {
+        col1.classList.remove("active");
+        summary.style.display = 'none'
+        console.long('none')
+      }}
+
+      var col2 = document.getElementById('col2')
+      function check1 () {
+       var from = document.getElementById('from')
+       if (from.style.display = 'none') {
+         col2.classList.add("active");
+         from.style.display = 'block'
+       } else {
+         col2.classList.remove("active");
+         from.style.display = 'none'
+       }}
+
+       var col3 = document.getElementById('col3')
+       function check2 () {
+        var classes = document.getElementById('classes')
+        if (classes.style.display = 'none') {
+          col3.classList.add("active");
+          classes.style.display = 'block'
+        } else {
+          col3.classList.remove("active");
+          classes.style.display = 'none'
+        }}
+    </script>
+  </body>
+</html>
