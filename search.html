@@ -3,13 +3,14 @@
     <head>
         <title> HTML Tutorial 1</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-   <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-   <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-   <link href="hover.css/css/css/hover-min.css" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+       <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+       <link href="hover.css/css/css/hover-min.css" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+     </head>
 
     <body>
       <header id="menu" class="fade">
@@ -18,12 +19,12 @@
             </div>
             <nav>
               <ul>
-                <li class="center"><a href="index.html" id="home">Home</a></li>
-                <li class="center"><a href="about.html">About</a></li>
-                <li class="center"><a href="search.html">Search</a></li>
-                <li class="center"><a href="news.html">News</a></li>
-                <li class="center"><a href="help.html">Help</a></li>
-                <li class="center"><a href="contact.html">Contact</a></li>
+                <a href="index.html" id="home"><li class="center">Home</li></a>
+  	            <a href="about.html"><li class="center">About</li></a>
+  	            <a href="search.html"><li class="center">Search</li></a>
+  	            <a href="news.html"><li class="center">News</li></a>
+  	            <a href="help.html"><li class="center">Help</li></a>
+  	            <a href="contact.html"><li class="center">Contact</li></a>
               </ul>
             </nav>
           </header>
@@ -33,9 +34,29 @@
     		<h1> Search </h1>
     			<a href="index.html"> HOME &nbsp; </a> <p> /    SEARCH </p>
     	</section>
+
     	<section id="search">
-    			<h1> Search </h1>
+        <section id="about">
+            <h1>Search </h1>
+            <form action="/search/" method="GET" id="search-form">
+              <input id="myInput" class="search-input" required type="search"  onkeyup="myFunction()" />
+              <button type="submit"><i class="fa fa-search" style="font-size:35px; color:#A88650; padding-left:20px;"></i></button>
+            </form>
+
+            <ul id="myUL">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="https://github.com/mr21xm/neighborhood-2">Latest Project</a></li>
+              <li><a href="requestforinfo.html">Partnership</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="help.html">Help</a></li>
+              <li><a href="search.html">Search</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+
+        </section>
     	</section>
+
 
     	<footer>
     	<div class="row">
@@ -48,5 +69,24 @@
     </div>
         </div>
     </footer>
+    <script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
   </body>
 </html>

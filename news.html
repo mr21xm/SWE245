@@ -3,14 +3,14 @@
     <head>
         <title> HTML Tutorial 1</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-   <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-   <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-   <link href="hover.css/css/css/hover-min.css" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+        <link href="hover.css/css/css/hover-min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+    </head>
     <body>
       <header id="menu" class="fade">
     		<div id="logo2">
@@ -18,12 +18,12 @@
             </div>
             <nav>
               <ul>
-                <li class="center"><a href="index.html" id="home">Home</a></li>
-                <li class="center"><a href="about.html">About</a></li>
-                <li class="center"><a href="search.html">Search</a></li>
-                <li class="center"><a href="news.html">News</a></li>
-                <li class="center"><a href="help.html">Help</a></li>
-                <li class="center"><a href="contact.html">Contact</a></li>
+                <a href="index.html" id="home"><li class="center">Home</li></a>
+  	            <a href="about.html"><li class="center">About</li></a>
+  	            <a href="search.html"><li class="center">Search</li></a>
+  	            <a href="news.html"><li class="center">News</li></a>
+  	            <a href="help.html"><li class="center">Help</li></a>
+  	            <a href="contact.html"><li class="center">Contact</li></a>
               </ul>
             </nav>
           </header>
@@ -34,7 +34,25 @@
     			<a href="index.html"> HOME &nbsp; </a> <p> /    NEWS </p>
     	</section>
     	<section id="news">
-    			<h1> News </h1>
+    			<h1 id="title"> News </h1>
+            <div id="panel" class="panel" onclick="myFunction()">
+              <h1> Text </h1> <i class="fa fa-angle-down"></i>
+            </div>
+              <div id="collapse" class="collapse" style="display:none;">
+                <h1>News</h1>
+              </div>
+            <div id="panel1" class="panel" onclick="myFunction1()">
+              <h1> Text </h1> <i class="fa fa-angle-down"></i>
+            </div>
+              <div id="collapse1" class="collapse" style="display:none;">
+                <h1>News</h1>
+              </div>
+            <div id="panel2" class="panel" onclick="myFunction2()">
+              <h1> Text </h1> <i class="fa fa-angle-down"></i>
+            </div>
+              <div id="collapse2" class="collapse" style="display:none;">
+                <h1>News</h1>
+              </div>
     	</section>
 
     	<footer>
@@ -48,5 +66,40 @@
     </div>
         </div>
     </footer>
+    <script>
+          function myFunction() {
+            var panel = document.getElementById('panel')
+            var collapse = document.getElementById('collapse')
+            if (collapse.style.display === "none") {
+              collapse.style.display = "block";
+              panel.style.marginBottom = "0";
+            } else {
+              collapse.style.display = "none";
+              panel.style.marginBottom = "20px";
+            }
+          }
+          function myFunction1() {
+            var panel1 = document.getElementById('panel1')
+            var collapse1 = document.getElementById('collapse1')
+            if (collapse1.style.display === "none") {
+              collapse1.style.display = "block";
+              panel1.style.marginBottom = "0";
+            } else {
+              collapse1.style.display = "none";
+              panel1.style.marginBottom = "20px";
+            }
+          }
+          function myFunction2() {
+            var panel2 = document.getElementById('panel2')
+            var collapse2 = document.getElementById('collapse2')
+            if (collapse2.style.display === "none") {
+              collapse2.style.display = "block";
+              panel2.style.marginBottom = "0";
+            } else {
+              collapse2.style.display = "none";
+              panel2.style.marginBottom = "20px";
+            }
+          }
+    </script>
   </body>
 </html>

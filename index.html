@@ -24,47 +24,54 @@
         </div>
         <nav>
           <ul>
-            <li class="hvr-underline-from-center"><a href="index.html" id="home">Home</a></li>
-            <li class="hvr-underline-from-center"><a href="about.html">About</a></li>
-            <li class="hvr-underline-from-center"><a href="requestforinfo.html">Partnership</a></li>
-            <li class="hvr-underline-from-center"><a href="search.html">Search</a></li>
-            <li class="hvr-underline-from-center"><a href="news.html">News</a></li>
-            <li class="hvr-underline-from-center"><a href="help.html">Help</a></li>
-            <li class="hvr-underline-from-center"><a href="contact.html">Contact</a></li>
+            <a href="index.html" id="home"><li class="hvr-underline-from-center">Home</li></a>
+            <a href="about.html"><li class="hvr-underline-from-center">About</li></a>
+            <a href="search.html"><li class="hvr-underline-from-center">Search</li></a>
+            <a href="news.html"><li class="hvr-underline-from-center">News</li></a>
+            <a href="help.html"><li class="hvr-underline-from-center">Help</li></a>
+            <a href="contact.html"><li class="hvr-underline-from-center">Contact</li></a>
           </ul>
         </nav>
       </header>
-		<div id="intro">
 	     <div id= "wrapper">
-        		<div id="slider-area" class="owl-carousel">
-        			<div style="background-image:
-            linear-gradient(
-              rgba(0, 0, 0, 0.6),
-              rgba(0, 0, 0, 0.6)
-            ),
-            /* bottom, image */
-             url(images/city.jpg);">
-                  <section class ="welcome">
-                  <div class="box">
-                        <div>
-                               <p id="fb">Front End <br>&nbsp;	&nbsp;Web Developer.</p>
-                        </div>
-                  </div>
-                 </section>
-             </div>
-        			<div style="background-image:
-            linear-gradient(
-              rgba(0, 0, 0, 0.6),
-              rgba(0, 0, 0, 0.6)
-            ),
-            /* bottom, image */
-             url(images/nature.jpg);">
+        		<div id="slider-area" class="owl-carousel owl-theme">
+          			<div style="background-image:
+                  linear-gradient(
+                    rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)
+                  ),
+                  /* bottom, image */
+                   url(images/city.jpg);">
+                        <section class ="welcome">
+                            <div class="box">
+                                         <p id="fb">Front End <br>&nbsp;	&nbsp;Web Developer.</p>
+                            </div>
+                        </section>
+                </div>
+          			<div style="background-image:
+                  linear-gradient(
+                    rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)
+                  ),
+                  /* bottom, image */
+                   url(images/nature.jpg);">
+                   <section class ="welcome">
+                       <div class="box">
+                                    <p id="fc">Latest Project</p>
+                                    <div id="latest">
+                                      <a href="https://github.com/mr21xm/neighborhood-2" target="_blank">
+                                  	  <div id="columnc">
+                                          <img src="images/screenshot3.PNG" alt="project3's photo">
+                                          <h1>Neighborhood Map Project</h1>
+                                        </div>
+                                  	  </div>
+                                  	  </a>
+                       </div>
+                   </section>
+                </div>
+          </div>
 
-           </div>
-        		</div>
-
-		</div>
-		</div>
+		   </div>
 			<section id ="hello">
             <div class="box">
 				<div id="wel">
@@ -159,6 +166,12 @@
      </div>
 	</div>
   </section>
+  <section id="par">
+    <div class="container">
+      <h1 class="alignleft">Want to be a partner?</h1>
+   <span class="alignright" id="download1"><a href="requestforinfo.html"><span>Create Partnership</span></a></span>
+   </div>
+  </section>
 
       <footer>
       	<div class="row">
@@ -183,22 +196,22 @@
 
     var scroll = $(window).scrollTop();
     if (scroll >= $('header').height()) {
-    $("#menu").removeClass("black");
-    $("#menu").addClass("fade");
-	$('a').addClass('high');
-	$('li').addClass('center');
-	$('li').removeClass('hvr-underline-from-center');
-	$('#logo').css('display','none');
-    $('#logo2').css('display','block');
+      $("#menu").removeClass("black");
+      $("#menu").addClass("fade");
+  	  $('a').addClass('high');
+  	  $('li').addClass('center');
+  	  $('li').removeClass('hvr-underline-from-center');
+  	  $('#logo').css('display','none');
+      $('#logo2').css('display','block');
     } else {
-    $("#menu").removeClass("white");
-    $("#menu").addClass("black");
-	$('a').removeClass('high');
-	$('li').removeClass('center');
-	$('li').addClass('hvr-underline-from-center');
-    $("#menu").removeClass("fade");
-	$('#logo').css('display','block')
-    $('#logo2').css('display','none')
+      $("#menu").removeClass("white");
+      $("#menu").addClass("black");
+  	  $('a').removeClass('high');
+  	  $('li').removeClass('center');
+  	  $('li').addClass('hvr-underline-from-center');
+      $("#menu").removeClass("fade");
+  	  $('#logo').css('display','block')
+      $('#logo2').css('display','none')
     }
     });
 
@@ -206,7 +219,9 @@
     loop:true,
     autoplay:true,
     nav:true,
+    navText : ["<div class='pev'><i class='fa fa-chevron-left'></i></div>","<div class='next'><i class='fa fa-chevron-right'></i></div>"],
     autoplaySpeed:1000/true,
+    margin:50,
     animateOut: 'fadeOut',
     autoplayTimeout:8000,
     responsive:{
